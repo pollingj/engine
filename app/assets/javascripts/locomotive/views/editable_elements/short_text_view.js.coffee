@@ -7,21 +7,21 @@ class Locomotive.Views.EditableElements.ShortTextView extends Backbone.View
   className: 'text input html'
 
   render: ->
-    $(@el).html(ich.editable_text_input(@model.toJSON()))
+    $(@el).html(ich.simple_text_input(@model.toJSON()))
 
     return @
 
-  after_render: ->
-    settings = _.extend {}, @tinymce_settings(),
-      oninit: ((editor) =>
-        $.cmd 'S', (() =>
-          @model.set(content: editor.getBody().innerHTML)
-          $(@el).parents('form').trigger('submit')
-        ), [], ignoreCase: true, document: editor.dom.doc),
-      onchange_callback: (editor) =>
-        @model.set(content: editor.getBody().innerHTML)
+  #after_render: ->
+  #  settings = _.extend {}, @tinymce_settings(),
+  #    oninit: ((editor) =>
+  #      $.cmd 'S', (() =>
+  #        @model.set(content: editor.getBody().innerHTML)
+  #        $(@el).parents('form').trigger('submit')
+  #      ), [], ignoreCase: true, document: editor.dom.doc),
+  #    onchange_callback: (editor) =>
+  #      @model.set(content: editor.getBody().innerHTML)
 
-    @$('textarea').tinymce(settings)
+  #  @$('textarea').tinymce(settings)
 
   tinymce_settings: ->
     window.Locomotive.tinyMCE.minimalSettings
@@ -30,5 +30,5 @@ class Locomotive.Views.EditableElements.ShortTextView extends Backbone.View
     # do nothing
 
   remove: ->
-    @$('textarea').tinymce().destroy()
+    #@$('textarea').tinymce().destroy()
     super
