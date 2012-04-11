@@ -20,11 +20,13 @@
 
 = f.inputs :name => :seo, :class => "inputs foldable #{'folded' if inputs_folded?(@page)}" do
 
-  = f.input :seo_title
+  - if can?(:manage, @page)
 
-  = f.input :meta_keywords
+    = f.input :seo_title
 
-  = f.input :meta_description
+    = f.input :meta_keywords
+
+    = f.input :meta_description
 
 - if can?(:manage, @page)
 
