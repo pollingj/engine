@@ -18,13 +18,13 @@
 
     = f.input :slug, :required => false, :hint => @page.slug.blank? ? t('.empty_slug') : public_page_url(@page), :input_html => { :'data-url' => get_path_pages_url, :disabled => @page.index? || @page.not_found? }, :wrapper_html => { :style => "#{'display: none' if @page.templatized? && !@page.templatized_from_parent?};", :class => 'em-inline-hints' }
 
-  = f.inputs :name => :seo, :class => "inputs foldable #{'folded' if inputs_folded?(@page)}" do
+= f.inputs :name => :seo, :class => "inputs foldable #{'folded' if inputs_folded?(@page)}" do
 
-    = f.input :seo_title
+  = f.input :seo_title
 
-    = f.input :meta_keywords
+  = f.input :meta_keywords
 
-    = f.input :meta_description
+  = f.input :meta_description
 
 - if can?(:manage, @page)
 
