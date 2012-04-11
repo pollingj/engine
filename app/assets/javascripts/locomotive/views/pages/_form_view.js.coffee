@@ -82,7 +82,7 @@ class Locomotive.Views.Pages.FormView extends Locomotive.Views.Shared.FormView
     @editor.refresh()
 
   render_editable_elements: ->
-    @$('.formtastic fieldset.inputs:first').before(@editable_elements_view.render().el)
+    @$('.formtastic').prepend(@editable_elements_view.render().el)
     @editable_elements_view.after_render()
 
   # Remove the editable elements and rebuild them
