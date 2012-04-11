@@ -7,7 +7,6 @@
   :plain
     page: #{@page.to_presenter.as_json_for_html_view.to_json}
 
-= can?(:manage, @page)
 - if can?(:manage, @page)
 
   = f.inputs :name => :information do
