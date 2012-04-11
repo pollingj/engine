@@ -7,7 +7,7 @@ class Locomotive.Views.EditableElements.ShortTextView extends Backbone.View
   className: 'text input short'
 
   render: ->
-    $(@el).html(ich.editable_text_input(@model.toJSON()))
+    $(@el).html(ich.simple_text_input(@model.toJSON()))
 
     @$('textarea').bind 'keyup', (event) =>
       input = $(event.target)
@@ -20,3 +20,9 @@ class Locomotive.Views.EditableElements.ShortTextView extends Backbone.View
 
   refresh: ->
     # do nothing
+
+  tinymce_settings: ->
+    window.Locomotive.tinyMCE.minimalSettings
+
+  remove: ->
+    super

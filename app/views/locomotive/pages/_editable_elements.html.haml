@@ -26,6 +26,19 @@
 
   = hidden_field_tag 'page[editable_elements_attributes][{{index}}][id]', '{{id}}', :id => 'page_editable_elements_attributes_{{index}}_id'
 
+%script{ :type => 'text/html', :id => 'simple_text_input' }
+
+  %label{ :for => 'page_editable_elements_attributes_{{index}}_content' } {{label}}
+
+  = text_field_tag 'page[editable_elements_attributes][{{index}}][content]', '{{content}}', :id => 'page_editable_elements_attributes_{{index}}_content'
+
+  {{#if hint}}
+  %p.inline-hints {{hint}}
+  {{/if}}
+
+  = hidden_field_tag 'page[editable_elements_attributes][{{index}}][id]', '{{id}}', :id => 'page_editable_elements_attributes_{{index}}_id'
+
+
 %script{ :type => 'text/html', :id => 'editable_file_input' }
 
   %label{ :for => 'page_editable_elements_attributes_{{index}}_content' } {{label}}
