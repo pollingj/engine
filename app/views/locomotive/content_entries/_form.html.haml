@@ -13,9 +13,11 @@
       :field        => field,
       :highlighted  => field._id == @content_type.label_field_id
 
-= f.inputs :name => :advanced_options, :class => "inputs foldable #{'folded' if inputs_folded?(@content_entry)}" do
+- if can?(:manage, @page)
 
-  = f.input :_slug
-  = f.input :seo_title
-  = f.input :meta_keywords
-  = f.input :meta_description
+  = f.inputs :name => :advanced_options, :class => "inputs foldable #{'folded' if inputs_folded?(@content_entry)}" do
+
+    = f.input :_slug
+    = f.input :seo_title
+    = f.input :meta_keywords
+    = f.input :meta_description
