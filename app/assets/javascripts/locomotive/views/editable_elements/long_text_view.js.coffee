@@ -12,7 +12,7 @@ class Locomotive.Views.EditableElements.LongTextView extends Backbone.View
     $(@el).html(ich.editable_text_input(@model.toJSON()))
 
     return @
-    
+
   after_render: ->
     settings = _.extend {}, @tinymce_settings(),
       oninit: ((editor) =>
@@ -38,7 +38,7 @@ class Locomotive.Views.EditableElements.LongTextView extends Backbone.View
     @$('textarea').tinymce(settings)
 
   tinymce_settings: ->
-    window.Locomotive.tinyMCE.defaultSettings
+    window.Locomotive.tinyMCE.minimalSettings
 
   refresh: ->
     # do nothing
@@ -46,3 +46,4 @@ class Locomotive.Views.EditableElements.LongTextView extends Backbone.View
   remove: ->
     @$('textarea').tinymce().destroy()
     super
+
