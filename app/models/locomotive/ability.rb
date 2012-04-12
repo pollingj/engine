@@ -33,6 +33,10 @@ module Locomotive
       can :sort, Page
 
       can :manage, [ContentEntry, ContentAsset]
+      
+      can :manage, Membership
+
+      cannot :grant_admin, Membership
 
       can :touch, Site do |site|
         site == @site
