@@ -38,7 +38,7 @@ class Locomotive.Views.EditableElements.LongTextView extends Backbone.View
     @$('textarea').tinymce(settings)
 
   tinymce_settings: ->
-    window.Locomotive.tinyMCE.minimalSettings
+    window.Locomotive.tinyMCE.defaultSettings
 
   refresh: ->
     # do nothing
