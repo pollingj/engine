@@ -98,6 +98,10 @@ module Locomotive
     def multi_sites?
       Locomotive.config.multi_sites?
     end
+    
+    def admin_on?(site = current_site)
+      site.memberships.detect { |m| m.admin? && m.account == current_locomotive_account }
+    end
 
     def public_page_url(page, options = {})
       if content = options.delete(:content)
