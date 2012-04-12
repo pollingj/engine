@@ -63,6 +63,8 @@ module Locomotive
       can :point, Site
 
       cannot :create, Site
+      
+      can :manage, Account
 
       can :manage, Membership
 
