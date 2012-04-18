@@ -17,7 +17,7 @@ window.Locomotive.tinyMCE =
     fullscreen_new_window: false
     fullscreen_settings:
       theme_advanced_path_location: 'top'
-    content_css : "/assets/screen.css"
+    content_css : "/sites/4f7b23e1650aeb26c5000004/theme/stylesheets/screen.css"
     style_formats: [
         title: "Checklist"
         block: "div"
