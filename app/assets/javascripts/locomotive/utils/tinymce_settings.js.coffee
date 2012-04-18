@@ -21,6 +21,8 @@ window.Locomotive.tinyMCE =
     style_formats: [
         title: "Checklist"
         block: "div"
+        classes: 'checklist'
+        wrapper: 1
     ]
 
 
