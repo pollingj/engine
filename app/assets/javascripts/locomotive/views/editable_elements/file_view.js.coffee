@@ -22,8 +22,6 @@ class Locomotive.Views.EditableElements.FileView extends Backbone.View
       input = $(event.target)[0]
       if input.files?
         @model.set(source: input.files[0])
-      else
-        @model.set(source: '')
 
     return @
 
@@ -41,6 +39,7 @@ class Locomotive.Views.EditableElements.FileView extends Backbone.View
         @$('a:first').hide() & @$('input[type=file]').show() & @$('a.delete').hide()
       on_cancel: =>
         @$('a:first').show() & @$('input[type=file]').hide() & @$('a.delete').show()
+        @model.set(source: @model.previous('source'))
 
   toggle_delete: (event) ->
     @_toggle event, 'delete',
