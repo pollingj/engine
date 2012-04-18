@@ -22,6 +22,8 @@ class Locomotive.Views.EditableElements.FileView extends Backbone.View
       input = $(event.target)[0]
       if input.files?
         @model.set(source: input.files[0])
+      else
+        @model.set(source: '')
 
     return @
 
