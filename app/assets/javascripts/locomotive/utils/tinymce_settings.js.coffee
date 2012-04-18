@@ -6,8 +6,9 @@ window.Locomotive.tinyMCE =
     plugins: 'safari,jqueryinlinepopups,locomotive_media,fullscreen'
     extended_valid_elements: 'iframe[width|height|frameborder|allowfullscreen|src|title]'
     theme_advanced_fonts : "Helvetica=helvetica,arial,sans-serif;Museo 300=Museo-300;Museo 500=Museo-500"
+    theme_advanced_styles : "Checklist=checklist"
     theme_advanced_buttons1: 'fullscreen,code,|,bold,italic,strikethrough,|,justifyleft,justifycenter,justifyright,justifyfull,|,bullist,numlist,|,outdent,indent,blockquote,|,link,unlink,|,locomotive_media'
-    theme_advanced_buttons2: 'formatselect,fontselect,fontsizeselect'
+    theme_advanced_buttons2: 'styleselect,formatselect,fontselect,fontsizeselect'
     theme_advanced_buttons3: ''
     theme_advanced_toolbar_location: 'top'
     theme_advanced_toolbar_align: 'left'
@@ -17,6 +18,8 @@ window.Locomotive.tinyMCE =
     fullscreen_new_window: false
     fullscreen_settings:
       theme_advanced_path_location: 'top'
+    content_css : "/assets/screen.css",
+
 
   minimalSettings:
     theme: 'advanced'
