@@ -5,6 +5,7 @@ window.Locomotive.tinyMCE =
     skin: 'locomotive'
     plugins: 'safari,jqueryinlinepopups,locomotive_media,fullscreen'
     extended_valid_elements: 'iframe[width|height|frameborder|allowfullscreen|src|title]'
+    theme_advanced_fonts : "Helvetica=helvetica,arial,sans-serif;Museo 300=Museo-300;Museo 500=Museo-500"
     theme_advanced_buttons1: 'fullscreen,code,|,bold,italic,strikethrough,|,justifyleft,justifycenter,justifyright,justifyfull,|,bullist,numlist,|,outdent,indent,blockquote,|,link,unlink,|,locomotive_media'
     theme_advanced_buttons2: 'formatselect,fontselect,fontsizeselect'
     theme_advanced_buttons3: ''
