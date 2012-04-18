@@ -6,9 +6,10 @@ window.Locomotive.tinyMCE =
     plugins: 'safari,jqueryinlinepopups,locomotive_media,fullscreen,paste'
     extended_valid_elements: 'iframe[width|height|frameborder|allowfullscreen|src|title]'
     theme_advanced_fonts : "Helvetica=helvetica,arial,sans-serif;Museo 300=Museo-300;Museo 500=Museo-500"
+    theme_advanced_blockformats: "p,h1,h2"
     theme_advanced_buttons1: 'fullscreen,code,|,bold,italic,strikethrough,|,justifyleft,justifycenter,justifyright,justifyfull,|,bullist,numlist,|,outdent,indent,blockquote,|,link,unlink,|,locomotive_media'
     theme_advanced_buttons2: 'styleselect,formatselect,fontselect,fontsizeselect'
-    theme_advanced_buttons3_add : "pastetext,pasteword,selectall"
+    theme_advanced_buttons3: "pastetext,pasteword,selectall"
     theme_advanced_toolbar_location: 'top'
     theme_advanced_toolbar_align: 'left'
     paste_auto_cleanup_on_paste : true
