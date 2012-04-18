@@ -9,7 +9,7 @@ class Locomotive.Views.EditableElements.ShortTextView extends Backbone.View
   render: ->
     $(@el).html(ich.simple_text_input(@model.toJSON()))
 
-    @$('textarea').bind 'keyup', (event) =>
+    @$('input').bind 'keyup', (event) =>
       input = $(event.target)
       @model.set(content: input.val())
 
