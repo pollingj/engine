@@ -49,6 +49,8 @@
     = f.input :cache_strategy, :as => :select, :collection => options_for_page_cache_strategy, :include_blank => false, :wrapper_html => { :style => "#{'display: none' if @page.redirect?}" }
 
     = f.input :redirect_url, :required => true, :wrapper_html => { :style => "#{'display: none' unless @page.redirect?}" }
+    
+- if admin_on?
 
   = f.inputs :name => :raw_template, :class => "inputs foldable #{'folded' if inputs_folded?(@page)}" do
 
