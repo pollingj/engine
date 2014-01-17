@@ -34,7 +34,7 @@ module Locomotive
             self.apply_patches
 
             # "cache" domains for better performance
-            self.heroku_domains = self.heroku_connection.list_domains(self.config.heroku[:name]).collect { |h| h[:domain] }
+            #self.heroku_domains = self.heroku_connection.list_domains(self.config.heroku[:name]).collect { |h| h[:domain] }
           end
 
           def open_heroku_connection
