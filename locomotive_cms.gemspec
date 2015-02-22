@@ -44,7 +44,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'bushido'
   s.add_dependency 'heroku', '2.19.1'
 
-  s.add_dependency 'rmagick', '2.12.2'
+  s.add_dependency 'rmagick', '2.13.2'
   s.add_dependency 'carrierwave', '0.5.6'
   s.add_dependency 'dragonfly', '~> 0.9.1'
   s.add_dependency 'rack-cache'
